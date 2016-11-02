@@ -1,2 +1,2 @@
 # pokemon
-This was the KeyTester repo, I remenaed it and removed the origo\inal pokemon repo
+This was the KeyTester repo, I remenaed it and removed the original pokemon repo
