@@ -2,10 +2,62 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js template</title>
+	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
-	<p>this is a test, something else in the body.</p>
-<p>this is a test, something in the body.</p>
+	<div class="wrapper">
+<header>
+<span class="menu">
+<div class="lines"></div>
+<div class="lines"></div>
+<div class="lines"></div>
+</span>
+	<h1 class="title">
+		<img class="sprite" src="images/netball.gif" alt="netball image">
+			Ryan's Pokedex 
+		<img class="sprite" src="images/netball.gif" alt="netball image">
+	</h1>
+
+	<nav class="main">
+		<div class="nav-inner">
+			<ul class="clearfix">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Calculator</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>		
+			</ul>
+		</div>
+	</nav>
+</header>
+		<h2>Pokemon Library</h2>
+		<div id='result' class='flex-container'></div>
+		<script type='template' id='template'>
+			<div class="poke-info flex-item live-search-list">
+			<h2>{{nat}}: {{name}}</h2>
+			<p class="left"><img  class="poke-img" src="{{image}}" /></p>
+			<p><b>Gender:</b> {{gender}}</p>
+			<p><b>HP:</b> {{hp}}</p>
+			<p><b>Attack:</b> {{atk}}</p>
+			<p><b>Defense:</b> {{def}}</p>
+			<p><b>SA:</b> {{sa}}</p>
+			<p><b>Type:</b> {{typei}}</p>
+			<p><b>Second Type:</b> {{typeii}}</p>
+			<p><b>Evolves At/By:</b> {{evolvesatby}}</p>
+			<p><b>Evolves Into:</b> {{evolvesinto}}</p>
+			</div>
+		</script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/script2.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".menu").click(function() {
+					$(".main").slideToggle(300);
+				});
+			});
+		</script>
+	</div>
 </body>
 </html>

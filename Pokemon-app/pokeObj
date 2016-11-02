@@ -1,0 +1,22 @@
+var pokemon = {
+    
+    name: "Charizard",
+    type1: "Fire",
+    type2: "Flying",
+    nature: "Modest",
+    stats: {
+    attack: 240,
+    defense: 255,
+    specialAttack: 348,
+    specialDefense: 269,
+    healthPoints: 360,
+    speed: 299
+    },
+    moveSet: {
+    move: "Flamethrower",
+    move: "Fire Dance",
+    move: "Smmokescreen",
+    move: "Dragon Rage"
+    }
+
+};
