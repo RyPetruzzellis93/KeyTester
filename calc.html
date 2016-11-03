@@ -1,0 +1,207 @@
+<html>
+<head>
+	<title>Effectiveness Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var limit = 2;
+		$('input.single-checkbox').on('change', function(evt) {
+		   if($(this).siblings(':checked').length >= limit) {
+		       this.checked = false;
+		   }
+		});
+	});
+
+var types = new Array(
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 0, 1, 1, 0.5, 1, 1],// Normal
+[1, 0.5, 0.5, 1, 2, 2, 1, 1, 1, 1, 1, 2, 0.5, 1, 0.5, 1, 2, 1, 1],// Fire
+[1, 2, 0.5, 1, 0.5, 1, 1, 1, 2, 1, 1, 1, 2, 1, 0.5, 1, 1, 1, 1],// Water
+[1, 1, 2, 0.5, 0.5, 1, 1, 1, 0, 2, 1, 1, 1, 1, 0.5, 1, 1, 1, 1],// Electric
+[1, 0.5, 2, 1, 0.5, 1, 1, 0.5, 2, 0.5, 1, 0.5, 2, 1, 0.5, 1, 0.5, 1, 1],// Grass
+[1, 0.5, 0.5, 1, 2, 0.5, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 0.5, 1, 1],// Ice
+[2, 1, 1, 1, 1, 2, 1, 0.5, 1, 0.5, 0.5, 0.5, 2, 0, 1, 2, 2, 0.5, 1],// Fighting
+[1, 1, 1, 1, 2, 1, 1, 0.5, 0.5, 1, 1, 1, 0.5, 0.5, 1, 1, 0, 2, 1],// Poison
+[1, 2, 1, 2, 0.5, 1, 1, 2, 1, 0, 1, 0.5, 2, 1, 1, 1, 2, 1, 1],// Ground
+[1, 1, 1, 0.5, 2, 1, 2, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 0.5, 1, 1],// Flying
+[1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 0.5, 1, 1, 1, 1, 0, 0.5, 1, 1],// Psychic
+[1, 0.5, 1, 1, 2, 1, 0.5, 0.5, 1, 0.5, 2, 1, 1, 0.5, 1, 2, 0.5, 0.5, 1],// Bug
+[1, 2, 1, 1, 1, 2, 0.5, 1, 0.5, 2, 1, 2, 1, 1, 1, 1, 0.5, 1, 1],// Rock
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 0.5, 1, 1, 1],// Ghost
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 0.5, 0, 1],// Dragon
+[1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 2, 1, 1, 2, 1, 0.5, 1, 0.5, 1],// Dark
+[1, 0.5, 0.5, 0.5, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0.5, 2, 1],// Steel
+[1, 0.5, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 1, 2, 2, 0.5, 1, 1],// Fairy
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);// None
+
+var type_name = new Array("Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy");
+
+var abilities = new Array(
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// None
+[1, 0.5, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Thick Fat
+[1, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Heatproof
+[1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Levitate
+[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Volt Absorb
+[1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Water Absorb
+[1, 1.25, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Dry Skin
+[1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Flash Fire
+[1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Sap Sipper
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Filter
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);// Wonder Guard
+
+var weathers = new Array(
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// None
+[1, 1.5, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],// Drought
+[1, 0.5, 1.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);// Drizzle
+
+var thing = {};
+$(document).ready(function(){
+
+	// put multiple input values into an arr
+		var $checkes = $('input.single-checkbox').change(function () {
+        var vals = $checkes.filter(':checked').map(function () {
+            return this.value;
+        }).get();
+        thing = {one: function() {
+        	return (vals);
+        }
+    	};
+        return (vals);
+        });
+
+	$("#submit").click(function()
+	{
+		$("div#content").hide();
+		var arr = thing.one();
+  		var type1 = arr[0]-1;
+		console.log(type1);
+		var type2 = arr[1]-1 || 18;
+		console.log(type2);
+		var ability = $("#def_ability").val();
+		var weather = $("#def_weather").val();
+		var color = [];
+		var result = [];
+		var output;
+		var i;
+		
+		if(type1 != type2)
+		{
+			for (i=0; i<=18; i++)
+			{
+				result[i] = ((types[i][type1] * types[i][type2]) * abilities[ability][i]) * weathers[weather][i];
+				if((types[i][type1] * types[i][type2]) < 2 && ability == 10){result[i] = 0};
+				if((types[i][type1] * types[i][type2]) >= 2 && ability == 9){result[i] = result[i] * 0.75};
+				if(result[i] == 1){color[i] = "dmg_normal"};
+				if(result[i] < 1){color[i] = "dmg_resist"};
+				if(result[i] < 0.5){color[i] = "dmg_resist2"};
+				if(result[i] == 0){color[i] = "dmg_immune"};
+				if(result[i] > 1){color[i] = "dmg_weak"};
+				if(result[i] > 2){color[i] = "dmg_weak2"};
+			}
+	
+			output = '<div id="table-output"><table class="output" cellspacing="1" cellpadding="3"> <tr>';
+			for (i=0; i<=17; i++)
+			{
+				output += '<td class="tbl_heading">' + type_name[i] + '</td><td class="'+ color[i] +'">x' + result[i] + '</td></tr>';
+			}
+			output += '</tr></table></div>';
+			
+			$("div#content").empty().append(output).show("slow");
+		} else
+		{
+			$("div#content").empty().append("Type 1 and Type 2 must be different").show("slow");
+		}
+		
+	});
+});
+</script>
+<div id="outer-wrapper">
+
+<!-- <h1>Effectiveness Calculator</h1> -->
+<div id="inner-wrapper">
+
+<div id="checkboxes">
+	<form id = "form">
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="1" id="r1" />
+    	<label class="whatever normal" for="r1">normal</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="2" id="r2" />
+    	<label class="whatever fire" for="r2">fire</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="3" id="r3" />
+    	<label class="whatever water" for="r3">water</label>
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="4" id="r4" />
+    	<label class="whatever elec" for="r4">elec</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="5" id="r5" />
+    	<label class="whatever grass" for="r5">grass</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="6" id="r6" />
+    	<label class="whatever ice" for="r6">ice</label>
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="7" id="r7" />
+    	<label class="whatever fight" for="r7">fight</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="8" id="r8" />
+    	<label class="whatever poison" for="r8">poison</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="9" id="r9" />
+    	<label class="whatever ground" for="r9">ground</label>
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="10" id="r10" />
+    	<label class="whatever flying" for="r10">flying</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="11" id="r11" />
+    	<label class="whatever psych" for="r11">psych</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="12" id="r12" />
+    	<label class="whatever bug" for="r12">bug</label>
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="13" id="r13" />
+    	<label class="whatever rock" for="r13">rock</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="14" id="r14" />
+    	<label class="whatever ghost" for="r14">ghost</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="15" id="r15" />
+    	<label class="whatever dragon" for="r15">dragon</label>
+    	<input class="single-checkbox" type="checkbox" name="rGroup" value="16" id="r16" />
+    	<label class="whatever dark" for="r16">dark</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="17" id="r17" />
+    	<label class="whatever steel" for="r17">steel</label>
+    	<input class="single-checkbox"  type="checkbox" name="rGroup" value="18" id="r18" />
+    	<label class="whatever fairy" for="r18">fairy</label>
+    </form>
+</div>
+<div class="aws">
+<div class="column">
+	<span class="labels">Ability</span><br> <select id="def_ability">
+	<option value="0">None</option>
+	<option value="1">Thick Fat</option>
+	<option value="2">Heatproof</option>
+	<option value="3">Levitate</option>
+	<option value="4">Volt Absorb</option>
+	<option value="5">Water Absorb</option>
+	<option value="6">Dry Skin</option>
+	<option value="7">Flash Fire</option>
+	<option value="8">Sap Sipper</option>
+	<option value="9">Filter</option>
+	<option value="10">Wonder Guard</option>
+	</select>
+</div>
+<div class="column">
+	<span class="labels">Weather</span><br> <select id="def_weather">
+	<option value="0">None</option>
+	<option value="1">Drought</option>
+	<option value="2">Drizzle</option>
+	</select>
+</div>
+<div class="submit-btn">
+	<input type="submit" id="submit" value="Submit">
+</div>
+</div><!-- close aws  -->
+
+</div><!-- close inner wrapper -->
+
+<div id="content"></div>
+
+
+</div><!-- close outer wrapper -->
+
+
+</body>
+</html>

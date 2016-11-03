@@ -1,0 +1,133 @@
+/* checkbox start */
+#form{margin-bottom:0;}
+#checkboxes {background-color: #fffcce;
+    padding: 12px 5px 0 5px;
+    border: 5px solid #DD9B11;
+    border-radius: 7px;}
+#checkboxes input[type=checkbox] {
+    display: none;
+}
+
+#checkboxes input[type=checkbox]:checked + .whatever {
+    background-color: #000;
+    color: #ccc;
+    text-shadow: 2px 2px #F00;
+}
+
+.whatever{
+			font-family: 'Press Start 2P', cursive;
+			font-weight: bold;
+			font-size: 7px;
+			text-shadow: 1px 1px #000;
+			text-transform: uppercase;
+			text-align: center;
+			border-width: 2px;
+			border-style: solid double;
+			border-color: #777;
+			border-radius: 3px;
+			width: 31%;
+			color: #FFF;
+			display: inline-block;
+			box-sizing: border-box;
+			padding: 3px 0;
+			margin-bottom:25px;
+}
+
+.row-1, .row-2, .row-3, .row-4, .row-5, .row-6 {
+	padding:10px 0;
+}
+.fire {		background-color: #F89030;}
+.water {	background-color: #6898F8;}
+.ghost {	background-color: #A870F8;}
+.steel {	background-color: #B8B8D0;}
+.grass {	background-color: #90E880;}
+.psych {	background-color: #F838A8;}
+.dark {		background-color: #908888;}
+.ground {	background-color: #DEBD8B;}
+.rock {		background-color: #C8A048;}
+.elec {	background-color: #E0E000;}
+.ice {		background-color: #C1CDFE;}
+.dragon {	background-color: #526AA4;}
+.fairy {	background-color: #FF65D5;}
+.normal {	background-color: #B8B8A8;}
+.fight {	background-color: #F87070;}
+.flying {	background-color: #58C8F0;}
+.bug {		background-color: #A0C888;}
+.poison {	background-color: #E090F8;}
+.aws {margin:0 0 0 20px;}
+.spacer {
+    padding: 5px 0;
+    border-color: rgba(255, 255, 255, 0);}
+
+    /* checkbox end */
+
+		body, td {
+			font-family:Verdana, Arial, Helvetica, sans-serif;
+			font-size:.75em; background-color: #007ac7;
+		}
+		h1 {
+			font-size:1.5em;
+			text-align: center;
+		}
+		#outer-wrapper{overflow: auto;
+    width: 100%;
+    max-width: 348px;
+    margin: 0 auto;
+    
+    
+    }
+		#inner-wrapper {float:left; width:60%;margin:5px 0 0 5px;}
+		#content {float:right; width:37%;margin-top:6px;}
+		#submit{display:inline-block;margin:15px 0;text-align: center;}
+		.labels {
+			font-size:1.2em;
+			margin-left:4px;
+		}
+		.column {
+			display:block;
+			margin:0px;
+			padding: 5px 0;
+			
+		}
+		.submit-btn {
+			margin-left:30px;
+		}
+		select {
+			min-width:120px;
+		}
+		.output {
+			background-color:#000000;
+			text-align:center;
+		}
+		.tbl_heading {
+			font-weight:bold;
+			background-color:#d58747;
+			color:#ffffff;
+			text-align:left;
+		}
+		.dmg_immune {
+			background-color:#aaaaaa;
+			width:75px;
+		}
+		.dmg_resist2 {
+			background-color:#b9b9ed;
+			width:75px;
+		}
+		.dmg_resist {
+			background-color:#b9edba;
+			width:75px;
+		}
+		.dmg_normal {
+			background-color:#ffffff;
+			width:75px;
+		}
+		.dmg_weak {
+			background-color:#eddab9;
+			width:75px;
+		}
+		.dmg_weak2 {
+			background-color:#edbab9;
+			width:75px;
+		}
+		td {border-color:red;}
+	
