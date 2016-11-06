@@ -2,7 +2,7 @@
 'use strict';
 
 var pokeTemplate = function(data) {
-	var local = 'http://localhost/',
+	var local = 'images/',
 	template = document.querySelector('#template').innerHTML,
 	result = document.querySelector('#result');
 	$.each(data, function(index, value) {
@@ -19,6 +19,7 @@ var pokeTemplate = function(data) {
 		.replace( /{{evolvesatby}}/, value.EvolvesAtBy)
 		.replace( /{{evolvesinto}}/, value.EvolvesInto)
 		.replace( /{{image}}/, local+value.Image);
+		console.log(value.Image);
 	});
 }
 

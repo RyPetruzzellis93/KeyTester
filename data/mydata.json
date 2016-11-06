@@ -20,7 +20,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 16",
     "EvolvesInto":"Ivysaur",
-    "Image":"pokemon/images/001.png"
+    "Image":"001.png"
   },
   {
     "Nat":2,
@@ -43,7 +43,7 @@
     "EvolvesFrom":"Bulbasaur",
     "EvolvesAtBy":"Lv. 32",
     "EvolvesInto":"Venusaur",
-    "Image":"pokemon/images/002.png"
+    "Image":"002.png"
   },
   {
     "Nat":3,
@@ -66,7 +66,7 @@
     "EvolvesFrom":"Ivysaur",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/003.png"
+    "Image":"003.png"
   },
   {
     "Nat":4,
@@ -89,7 +89,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 16",
     "EvolvesInto":"Charmeleon",
-    "Image":"pokemon/images/004.png"
+    "Image":"004.png"
   },
   {
     "Nat":5,
@@ -112,7 +112,7 @@
     "EvolvesFrom":"Charmander",
     "EvolvesAtBy":"Lv. 36",
     "EvolvesInto":"Charizard",
-    "Image":"pokemon/images/005.png"
+    "Image":"005.png"
   },
   {
     "Nat":6,
@@ -135,7 +135,7 @@
     "EvolvesFrom":"Charmeleon",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/006.png"
+    "Image":"006.png"
   },
   {
     "Nat":7,
@@ -158,7 +158,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 16",
     "EvolvesInto":"Wartortle",
-    "Image":"pokemon/images/007.png"
+    "Image":"007.png"
   },
   {
     "Nat":8,
@@ -181,7 +181,7 @@
     "EvolvesFrom":"Squirtle",
     "EvolvesAtBy":"Lv. 36",
     "EvolvesInto":"Blastoise",
-    "Image":"pokemon/images/008.png"
+    "Image":"008.png"
   },
   {
     "Nat":9,
@@ -204,7 +204,7 @@
     "EvolvesFrom":"Wartortle",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/009.png"
+    "Image":"009.png"
   },
   {
     "Nat":10,
@@ -227,7 +227,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 7",
     "EvolvesInto":"Metapod",
-    "Image":"pokemon/images/010.png"
+    "Image":"010.png"
   },
   {
     "Nat":11,
@@ -250,7 +250,7 @@
     "EvolvesFrom":"Caterpie",
     "EvolvesAtBy":"Lv. 10",
     "EvolvesInto":"Butterfree",
-    "Image":"pokemon/images/011.png"
+    "Image":"011.png"
   },
   {
     "Nat":12,
@@ -273,7 +273,7 @@
     "EvolvesFrom":"Metapod",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/012.png"
+    "Image":"012.png"
   },
   {
     "Nat":13,
@@ -296,7 +296,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 7",
     "EvolvesInto":"Kakuna",
-    "Image":"pokemon/images/013.png"
+    "Image":"013.png"
   },
   {
     "Nat":14,
@@ -319,7 +319,7 @@
     "EvolvesFrom":"Weedle",
     "EvolvesAtBy":"Lv. 10",
     "EvolvesInto":"Beedrill",
-    "Image":"pokemon/images/014.png"
+    "Image":"014.png"
   },
   {
     "Nat":15,
@@ -342,7 +342,7 @@
     "EvolvesFrom":"Kakuna",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/015.png"
+    "Image":"015.png"
   },
   {
     "Nat":16,
@@ -365,7 +365,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 18",
     "EvolvesInto":"Pidgeotto",
-    "Image":"pokemon/images/016.png"
+    "Image":"016.png"
   },
   {
     "Nat":17,
@@ -388,7 +388,7 @@
     "EvolvesFrom":"Pidgey",
     "EvolvesAtBy":"Lv. 36",
     "EvolvesInto":"Pidgeot",
-    "Image":"pokemon/images/017.png"
+    "Image":"017.png"
   },
   {
     "Nat":18,
@@ -411,7 +411,7 @@
     "EvolvesFrom":"Pidgeotto",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/018.png"
+    "Image":"018.png"
   },
   {
     "Nat":19,
@@ -434,7 +434,7 @@
     "EvolvesFrom":"N/A",
     "EvolvesAtBy":"Lv. 20",
     "EvolvesInto":"Ratticate",
-    "Image":"pokemon/images/019.png"
+    "Image":"019.png"
   },
   {
     "Nat":20,
@@ -457,6 +457,6 @@
     "EvolvesFrom":"Rattata",
     "EvolvesAtBy":"N/A",
     "EvolvesInto":"N/A",
-    "Image":"pokemon/images/020.png"
+    "Image":"020.png"
   }
 ]
