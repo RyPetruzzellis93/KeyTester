@@ -94,7 +94,16 @@ header {
 
 
 .menu {display:none;}
-
+.stat-info {
+    width: 90%;
+    padding: 5px;
+    line-height: 10px;
+    margin: 8px auto;
+    background-color: #f7f4ba;
+    border-bottom: 1px solid #efe555;
+    border-right: 1px solid #efe555;
+    box-shadow: inset 2px 2px 5px #56553d;
+}
 p {
 	margin:8px;
 	text-align: right

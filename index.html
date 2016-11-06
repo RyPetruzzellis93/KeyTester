@@ -35,9 +35,11 @@
 		<h2>Pokemon Library</h2>
 		<div id='result' class='flex-container'></div>
 		<script type='template' id='template'>
-			<div class="poke-info flex-item live-search-list">
-			<h2>{{nat}}: {{name}}</h2>
+			<div class="poke-info flex-item">
+			<h2>{{name}}</h2>
 			<p class="left"><img  class="poke-img" src="{{image}}" /></p>
+			<div class="stat-info">
+			<p><b>Pokedex #:</b> {{nat}}</p>
 			<p><b>Gender:</b> {{gender}}</p>
 			<p><b>HP:</b> {{hp}}</p>
 			<p><b>Attack:</b> {{atk}}</p>
@@ -47,6 +49,7 @@
 			<p><b>Second Type:</b> {{typeii}}</p>
 			<p><b>Evolves At/By:</b> {{evolvesatby}}</p>
 			<p><b>Evolves Into:</b> {{evolvesinto}}</p>
+			</div>
 			</div>
 		</script>
 		<script src="js/jquery-2.1.4.min.js"></script>

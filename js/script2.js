@@ -2,7 +2,7 @@
 'use strict';
 
 var pokeTemplate = function(data) {
-	var local = 'http://192.168.1.11/~ryanpetruzzellis/',
+	var local = 'http://localhost/',
 	template = document.querySelector('#template').innerHTML,
 	result = document.querySelector('#result');
 	$.each(data, function(index, value) {
