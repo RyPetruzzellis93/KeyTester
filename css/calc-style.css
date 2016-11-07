@@ -14,23 +14,23 @@
     text-shadow: 2px 2px #F00;
 }
 
-.whatever{
-			font-family: 'Press Start 2P', cursive;
-			font-weight: bold;
-			font-size: 7px;
-			text-shadow: 1px 1px #000;
-			text-transform: uppercase;
-			text-align: center;
-			border-width: 2px;
-			border-style: solid double;
-			border-color: #777;
-			border-radius: 3px;
-			width: 31%;
-			color: #FFF;
-			display: inline-block;
-			box-sizing: border-box;
-			padding: 3px 0;
-			margin-bottom:25px;
+.whatever {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    font-size: 0.55em;
+    text-shadow: 1px 1px #000;
+    text-transform: uppercase;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid double;
+    border-color: #777;
+    border-radius: 3px;
+    width: 31%;
+    color: #FFF;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 25px;
 }
 
 .row-1, .row-2, .row-3, .row-4, .row-5, .row-6 {
@@ -61,19 +61,11 @@
 
     /* checkbox end */
 
-		body, td {
-			font-family:Verdana, Arial, Helvetica, sans-serif;
-			font-size:.75em; background-color: #007ac7;
-		}
-		h1 {
-			font-size:1.5em;
-			text-align: center;
-		}
-		#outer-wrapper{overflow: auto;
+		#outer-wrapper{
+	overflow: auto;
     width: 100%;
-    max-width: 348px;
     margin: 0 auto;
-    
+
     
     }
 		#inner-wrapper {float:left; width:60%;margin:5px 0 0 5px;}

@@ -32,3 +32,5 @@ $.ajax({
 		pokeTemplate(data);
 	}
 });
+
+// --poke-search script--

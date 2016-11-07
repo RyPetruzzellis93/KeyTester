@@ -8,6 +8,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	clear: both;
 }
 header {
 	margin-top: 25px;
@@ -33,7 +34,14 @@ header {
     text-align: center;
     box-shadow: 2px 2px 6px #454545;
 }
-
+.page-name {
+	float: right;
+    background-color: #a7bf5c;
+    padding-right: 11px;
+    border-right: none;
+    border-right-style: none;
+    border: 3px dashed #990;
+}
 .page-title {
     text-align:center;
 }
@@ -100,9 +108,8 @@ header {
     line-height: 10px;
     margin: 8px auto;
     background-color: #f7f4ba;
-    border-bottom: 1px solid #efe555;
-    border-right: 1px solid #efe555;
-    box-shadow: inset 2px 2px 5px #56553d;
+    border: 1px solid #efe555;
+    box-shadow: inset 0px 0px 7px #56553d;
 }
 p {
 	margin:8px;
@@ -166,3 +173,5 @@ p {
 	
 	
 }
+
+/* --------Search Bar Style-------- */
