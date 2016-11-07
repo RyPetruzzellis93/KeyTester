@@ -39,21 +39,23 @@
 			<h2 class="page-name">{{name}}</h2>
 			<p class="left"><img  class="poke-img" src="{{image}}" /></p>
 			<div class="stat-info">
-			<p><b>Pokedex #:</b> {{nat}}</p>
-			<p><b>Gender:</b> {{gender}}</p>
-			<p><b>HP:</b> {{hp}}</p>
-			<p><b>Attack:</b> {{atk}}</p>
-			<p><b>Defense:</b> {{def}}</p>
-			<p><b>SA:</b> {{sa}}</p>
-			<p><b>Type:</b> {{typei}}</p>
-			<p><b>Second Type:</b> {{typeii}}</p>
-			<p><b>Evolves At/By:</b> {{evolvesatby}}</p>
+			<p class="name"><b>Pokedex #:</b> {{nat}}</p>
+			<p class="name"><b>Gender:</b> {{gender}}</p>
+			<p class="name"><b>HP:</b> {{hp}}</p>
+			<p class="name"><b>Attack:</b> {{atk}}</p>
+			<p class="name"><b>Defense:</b> {{def}}</p>
+			<p class="name"><b>SA:</b> {{sa}}</p>
+			<p class="name"><b>Type:</b> {{typei}}</p>
+			<p class="name"><b>Second Type:</b> {{typeii}}</p>
+			<p class="name"><b>Evolves At/By:</b> {{evolvesatby}}</p>
 			<p><b>Evolves Into:</b> {{evolvesinto}}</p>
 			</div>
 			</div>
 		</script>
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/script2.js"></script>
+		<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.js"></script>
 		<script>
 			$(document).ready(function() {
 				$(".menu").click(function() {
